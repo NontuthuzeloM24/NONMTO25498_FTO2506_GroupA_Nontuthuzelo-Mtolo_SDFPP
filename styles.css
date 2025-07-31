@@ -1,10 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 @layer utilities {
   .bg-self {
-    background-image: url('image/images.png.png');
+    background-image: url("image/images.png.png");
     background-size: cover;
     background-position: center;
   }

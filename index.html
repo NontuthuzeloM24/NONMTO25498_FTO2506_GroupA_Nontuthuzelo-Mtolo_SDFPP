@@ -8,24 +8,37 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css"> <!-- link to the custom styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
 <body>
-    <main class="bg-self min-h-screen p-8 text-gray-800 font-sans"> <!-- container background, padding, text styles -->
+    <main class="bg-self min-h-screen p-8 text-gray-800 text-lx md:text-2lx font-poppins">
+        <!-- container background, padding, text styles -->
 
-        <header class="flex flex-col md:flex-row items-center bg-white rounded-lg shadow-md mb-8">
+        <header class="flex items-start py-6 px-8 gap-4 mb-8 bg-white p-4 rounded-lg shadow-md">
             <!-- header section with flexbox for layout header, row on medium, white card look -->
-            <div class="w-32 h-32 md:w-48 md:h-48 flex-shrink-0 mb-4 md:mb-0 mr-0 md:mr-6">
-                <img class="object-cover w-full h-full rounded-lg" src="image/IMG_3651.jpg"
-                    alt="Nontuthuzelo with a gentle smile and head tilted to the left" />
+            <div class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-xl overflow-hidden flex-shrink-0">
+                <img src="image/IMG_3651.jpg" alt="Nontuthuzelo with a gentle smile and head tilted to the left"
+                    class="object-cover w-full h-full" />
             </div>
 
-            <div class="text-center md:text-left"> <!-- text alignment for header -->
-                <h1 class="text-2xl md:text-3xl font-bold mb-2">
+            <div class="text-lg sm:text-xl md:text-2xl font-bold mb-2"> <!-- text alignment for header -->
+                <h1 class="text-2xl font-bold mb-2">
                     Nontuthuzelo Mtolo
                 </h1>
-                <p class="text-gray-600 leading-relaxed">Aspiring Front-End Developer with a strong foundation in HTML
+                <p class="text-gray-600 text-sm sm:text-base leading-relaxed">Aspiring Front-End Developer with a strong foundation in HTML
                     and CSS, focused on creating responsive, user-friendly interfaces. Bringing 3 years of customer
                     service experience, with strong communication, problem-solving, and user-centered thinking.
                     Detail-oriented and adaptable, eager to contribute to a collaborative team and grow in modern
@@ -33,36 +46,35 @@
             </div>
         </header>
 
-        <!-- Proficiency section -->
-        <section class="bg-white rounded-lg shadow-md p-6 mb-8">
-            <h2 class="text-2xl font-semibold mb-4">Proficiency</h2>
-            <div class="flex space-x-4 text-gray-500 text-sm mb-4">
-                <span>Beginner</span>
-                <span>Intermediate</span>
-                <span>Advance*</span>
+        <!-- Proficiency & Skills Section -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 px-4 max-w-6xl">
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="text-2xl font-semibold mb-4">Proficiency</h2>
+                <div class="flex space-x-4 text-gray-500 text-sm mb-4">
+                    <span>Beginner</span>
+                    <span>Intermediate</span>
+                    <span>Advance*</span>
+                </div>
+                <div class="mb-4">
+                    <div class="flex justify-between mb-1 text-sm font-medium text-gray-700">
+                        <span>HTML</span><span>Intermediate</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded h-3">
+                        <div class="bg-green-500 h-3 rounded" style="width:70%"></div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="flex justify-between mb-1 text-sm font-medium text-gray-700">
+                        <span>CSS</span><span>Intermediate</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded h-3">
+                        <div class="bg-green-500 h-3 rounded" style="width:60%"></div>
+                    </div>
+                </div>
             </div>
 
-            <div class="mb-4">
-                <div class="flex justify-between mb-1 text-sm font-medium text-gray-700">
-                    <span>HTML</span><span>Intermediate</span>
-                </div>
-                <div class="w-full bg-gray-200 rounded h-3">
-                    <div class="bg-green-500 h-3 rounded" style="width:70%"></div>
-                </div>
-            </div>
-
-            <div class="mb-3">
-                <div class="flex justify-between mb-1 text-sm font-medium text-gray-700">
-                    <span>CSS</span><span>Intermediate</span>
-                </div>
-                <div class="w-full bg-gray-200 rounded h-3">
-                    <div class="bg-green-500 h-3 rounded" style="width:60%"></div>
-                </div>
-            </div>
-        </section>
-
-        <section class="bg-white rounded-lg shadow-md p-6 mb-8">
-            <div>
+            <!-- Skills Section -->
+            <div class="bg-white rounded-lg shadow-md p-6">
                 <h3 class="text-2xl font-semibold mb-4">Skills</h3>
                 <div class="flex flex-wrap gap-2">
                     <span class="bg-gray-200 text-black-800 text-sm px-3 py-1 rounded-full">Software Development</span>
@@ -80,9 +92,9 @@
 
         <section class="bg-white p-4 rounded-lg mb-8">
             <h2 class="text-2xl font-semibold mb-4">Projects</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
 
-                <div class="bg-gray-200 p-4 rounded-lg shadow-md">
+                <div class="bg-gray-20 text-black p-4 rounded-lg shadow-md w-full max-w-full break-words">
                     <div year>2025</div>
                     <h3>Portfolio Website</h3>
                     <p><strong>Brief:</strong>Developed a personal portfolio website to showcase projects and skills</p>
@@ -91,7 +103,7 @@
                         and accessibility</p>
                 </div>
 
-                <div class="bg-gray-200 p-4 rounded-lg shadow-md">
+                <div class="bg-gray-200 text-black p-4 rounded-lg shadow-md w-full max-w-full break-words">
                     <div year>2025</div>
                     <h3>Tailwind Refactor Challenge</h3>
                     <p><strong>Brief:</strong>Refactored a website footer using HTML and Tailwind CSS to create a clean,
@@ -101,7 +113,7 @@
                         sizes</p>
                 </div>
 
-                <div class="bg-gray-200 p-4 rounded-lg shadow-md">
+                <div class="bg-gray-200 text-black p-4 rounded-lg shadow-md w-full max-w-full break-words">
                     <div year>2025</div>
                     <h3>Fully Responsive HTML & CSS footer challenge</h3>
                     <p><strong>Brief:</strong>Structured and styled a fully responsive footer using semantic HTML and
@@ -112,7 +124,7 @@
                         screen sizes.</p>
                 </div>
 
-                <div class="bg-gray-200 p-4 rounded-lg shadow-md">
+                <div class="bg-gray-200 text-black p-4 rounded-lg shadow-md w-full max-w-full break-words">
                     <div year>2025</div>
                     <h3>CS Cat HTML Portfolio</h3>
                     <p><strong>Brief:</strong>Created a well-structured, semantic HTML portfolio page featuring key
@@ -126,26 +138,26 @@
             </div>
         </section>
 
-        <section class="grid md:grid-cols-2 gap-6 mb-8">
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 px-4 max-w-6xl mx-auto">
             <!-- Education -->
             <div class="bg-white p-6 rounded-lg shadow-md">
-                <h2 class="text-2xl font-semibold mb-4">Education</h2>
-                <div class="mb-4">
-                    <p class="text-sm text-gray-500">June 2025 - Dec 2025</p>
-                    <h3 class="font-bold">CodeSpace Academy</h3>
-                    <p>Software Development | Full-time</p>
-                    <ul class="list-disc list-inside text-sm mt-2 text-gray-700">
+                <h2 class="text-2xl font-semibold mb-6">Education</h2>
+                <div class="flex gap-6 items-start flex-wrap bg-gray-200 p-4 rounded-lg mb-4">
+                    <p class="w-full text-sm text-black">June 2025 - Dec 2025</p>
+                    <h3 class="w-full font-bold text-lg mt-2">CodeSpace Academy</h3>
+                    <p class="w-full text-sm text-gray-700 mt-2">Software Development | Full-time</p>
+                    <ul class="w-3/4 list-disc list-inside text-sm mt-2 text-black space-y-1">
                         <li>Built responsive websites using semantic HTML & CSS</li>
                         <li>Used GitHub for version control and collaboration</li>
                         <li>Applied UI/UX principles for mobile-first design</li>
                     </ul>
                 </div>
                 <!-- Second Education Item -->
-                <div>
-                    <p class="text-sm text-gray-500">Jan 2014 - Dec 2018</p>
-                    <h3 class="font-bold">Malcomess Senior Secondary School</h3>
-                    <p>Matric | NQF Level 4</p>
-                    <ul class="list-disc list-inside text-sm mt-2 text-gray-700">
+                <div class="flex gap-6 items-start flex-wrap bg-gray-200 p-4 rounded-lg mb-4">
+                    <p class="w-full text-sm text-black">Jan 2014 - Dec 2018</p>
+                    <h3 class="w-full font-bold text-lg mt-2">Malcomess Senior Secondary School</h3>
+                    <p class="w-full text-sm text-gray-700 mt-2">Matric | NQF Level 4</p>
+                    <ul class="w-3/4 list-disc list-inside text-sm mt-2 text-black space-y-1">
                         <li>Developed foundational problem-solving skills</li>
                         <li>Participated in team-based school activities</li>
                     </ul>
@@ -153,46 +165,51 @@
             </div>
 
             <!-- Tools -->
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <h2 class="text-2xl font-semibold mb-4">Tools</h2>
-                <div class="space-y-4">
-                    <div>
-                        <p class="font-semibold">Languages</p>
-                        <div class="flex space-x-4 mt-2">
-                            <img src="path/html-icon.png" alt="HTML" class="h-8 w-8" />
-                            <img src="path/css-icon.png" alt="CSS" class="h-8 w-8" />
+            <div class="bg-white p-2 rounded-lg shadow-md">
+                <h2 class="text-center text-2xl font-semibold mb-4">Tools</h2>
+                <div class="flex flex-row justify-between gap-4 md:flex-col md:items-center">
+                    <div class="bg-gray-200 rounded-xl p-6 w-1/3 md:w-full flex flex-col items-center shadow-sm">
+                        <p class="bg-black text-white text-sm px-4 py-1 rounded-full mb-4">Languages</p>
+                        <div class="flex flex-col gap-4 items-center">
+                            <i class="fa-brands fa-html5 fa-beat fa-lg" style="color: #e34c26;"></i>
+                            <i class="fa-brands fa-css3 fa-beat fa-lg" style="color: #264de4;"></i>
                         </div>
                     </div>
-                    <div>
-                        <p class="font-semibold">Design</p>
-                        <div class="flex space-x-4 mt-2">
-                            <img src="path/figma-icon.png" alt="Figma" class="h-8 w-8" />
-                            <img src="path/google-tools.png" alt="Google Tools" class="h-8 w-8" />
+                    <div class="bg-gray-200 rounded-xl p-6 w-1/3 md:w-full flex flex-col items-center shadow-sm">
+                        <p class="bg-black text-white text-sm px-4 py-1 rounded-full mb-4">Design</p>
+                        <div class="flex flex-col gap-4 items-center">
+                            <i class="fa-brands fa-figma fa-lg" style="color: #a259ff;"></i>
+                            <i class="fa-brands fa-google fa-xl" style="color: #bbc624;"></i>
                         </div>
                     </div>
-                    <div>
-                        <p class="font-semibold">Dev Tools</p>
-                        <div class="flex space-x-4 mt-2">
-                            <img src="path/git-icon.png" alt="Git" class="h-8 w-8" />
-                            <img src="path/github-icon.png" alt="GitHub" class="h-8 w-8" />
-                            <img src="path/vscode-icon.png" alt="VS Code" class="h-8 w-8" />
+                    <div class="bg-gray-200 rounded-xl p-6 w-1/3 md:w-full flex flex-col items-center shadow-sm">
+                        <p class="bg-black text-white text-sm px-4 py-1 rounded-full mb-4">Dev Tools</p>
+                        <div class="flex flex-col gap-4 items-center">
+                            <i class="fa-brands fa-square-github fa-xl" style="color: #FFD43B;"></i>
+                            <i class="fa-brands fa-git fa-xl"></i>
+                            <i class="fas fa-code fa-lg text-blue-600"></i>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Experience Section -->
+
         <section class="bg-white p-6 rounded-lg shadow-md mb-8">
             <div class="space-x-4 items-center">
                 <h2 class="text-2xl font-semibold mb-4">Experience</h2>
 
-                <div class="bg-gray-200 p-4 rounded-lg shadow-md mb-4">
-                    <div>
-                        <p class="text-sm text-gray-500">April, 2024 - April, 2025</p>
-                        <h3>Customer Support</h3>
-                        <p>Foundever | Full-time</p>
+                <div class="flex gap-6 items-start flex-wrap bg-800 p-4 rounded-lg shadow-md mb-4">
+                    <div class="absolute top-2 right-2 bg-orange-600 text-white text-xs px-2 py-1 rounded">
+                        Most Recent
                     </div>
-                    <ul class="list-inside text-sm mt-2 text-gray-700">
+                    <div>
+                        <p class="w-full text-sm text-black">April, 2024 - April, 2025</p>
+                        <h3 class="w-full font-bold text-lg mt-2">Customer Support</h3>
+                        <p class="w-full text-sm text-gray-700 mt-2">Foundever | Full-time</p>
+                    </div>
+                    <ul class="w-3/4 list-disc list-inside text-sm mt-2 text-black space-y-1">
                         <li>Assisted customers in trouble shooting technical problems with Bolt App and services,
                             providing step-by-step guidance with making use of Knowledge base.</li>
                         <li>Increased proficiency and expanded technical skill set using different CRMs, mainly
@@ -203,13 +220,13 @@
                     </ul>
                 </div>
 
-                <div class="bg-gray-200 p-4 rounded-lg shadow-md mb-4">
+                <div class="flex gap-6 items-start flex-wrap bg-gray-200 p-4 rounded-lg shadow-md mb-4 hover:-translate-y-2 hover:shadow-lg cursor-pointer">
                     <div>
-                        <p>July, 2023 - April, 2024</p>
-                        <h3>Customer Service Agent</h3>
-                        <p>TLS Contact | Part-time</p>
+                        <p class="w-full text-sm text-black">July, 2023 - April, 2024</p>
+                        <h3 class="w-full font-bold text-lg mt-2">Customer Service Agent</h3>
+                        <p class="w-full text-sm text-gray-700 mt-2">TLS Contact | Part-time</p>
                     </div>
-                    <ul>
+                    <ul class="w-3/4 list-disc list-inside text-sm mt-2 text-black space-y-1">
                         <li>Obtained and examined all the relevant information and documents provided by the applicant
                             through careful analysis, being attentive to detail, according to the type of visa being
                             applied for. </li>
@@ -220,13 +237,13 @@
                     </ul>
                 </div>
 
-                <div class="bg-gray-200 p-4 rounded-lg shadow-md mb-4">
+                <div class="flex gap-6 items-start flex-wrap bg-gray-200 p-4 rounded-lg shadow-md mb-4 hover:-translate-y-2 hover:shadow-lg cursor-pointer">
                     <div>
-                        <p>June, 2022 - May, 2023</p>
-                        <h3>Partner Support Intern</h3>
-                        <p>Yoyo Group | Full-time</p>
+                        <p class="w-full text-sm text-black">June, 2022 - May, 2023</p>
+                        <h3 class="w-full font-bold text-lg mt-2">Partner Support Intern</h3>
+                        <p class="w-full text-sm text-gray-700 mt-2">Yoyo Group | Full-time</p>
                     </div>
-                    <ul>
+                    <ul class="w-3/4 list-disc list-inside text-sm mt-2 text-black space-y-1">
                         <li>Use of MS Excel for editing and alteration of daily reports and escalated major voucher
                             issues to account managers and engineers.</li>
                         <li>Read and pulled out click data on Braze for weekly reports and support campaign, loyalty and
@@ -238,15 +255,16 @@
             </div>
         </section>
 
-        <footer class="justify-between py-6 mt-8 bg-orange-500 rounded-lg w=fill">
-            <h2 class="text-lg font-semibold mb-2">Let's chat! I'm ready to work on exciting projects.</h2>
-            <div>
-                <a href="https://www.linkedin.com/in/nontuthuzelo-mtolo-877b34237" target="_blank"
+        <footer class="py-6 mb-6 bg-orange-600 rounded-lg w=full">
+            <h2 class="text-white text-2xl font-semibold mx-8 mb-2">Let's chat! I'm ready to work on exciting projects.
+            </h2>
+            <div class="text-white text-md">
+                <a class="mx-8" href="https://www.linkedin.com/in/nontuthuzelo-mtolo-877b34237" target="_blank"
                     aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a> |
-                <a href="https://github.com/NontuthuzeloM24" target="_blank" aria-label="GitHub"><i
+                <a class="mx-8" href="https://github.com/NontuthuzeloM24" target="_blank" aria-label="GitHub"><i
                         class="fab fa-github"></i></a> |
-                <a href="mailto:mtolonontuthuzelo4@gmail.com">mtolonontuthuzelo4@gmail.com</a> |
-                <a href="tel:+27751904180">075 190 4180</a>
+                <a class="mx-8" href="mailto:mtolonontuthuzelo4@gmail.com">mtolonontuthuzelo4@gmail.com</a> |
+                <a class="mx-8" href="tel:+27751904180">075 190 4180</a>
             </div>
         </footer>
 
