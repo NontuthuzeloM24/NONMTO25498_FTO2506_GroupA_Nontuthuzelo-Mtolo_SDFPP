@@ -106,7 +106,7 @@ You can earn bonus marks for:
 - ✅ Make sure the naming convention of your repo is correct
 - ✅ Include this README file in your repo  
 - ✅ Add your 5–10 min presentation video link to Google Drive (or similar) and share it with your coach 
-- ✅ Paste your video link in your README 
+- ✅ Paste your video link in your README [https://www.loom.com/share/bc89f844a35d4ba58b3adfac4e130628?sid=2e1fc9a9-b1fe-4d82-805d-a3085bd37cab]
 - ✅ Push your project to your SDFPP GitHub repo
 - ✅ Submit your SDFPP GitHub repo link to the LMS
 
